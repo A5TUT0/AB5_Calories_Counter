@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calories Counter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+      <div class="w-full max-w-3xl bg-white p-5 rounded-lg shadow-lg">
+        <header>
+          <nav
+            class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800"
+          >
+            <div
+              class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+            >
+              <a href="" class="flex items-center">
+                <img
+                  src="./4812918.png"
+                  class="mr-3 h-6 sm:h-9"
+                  alt="Flowbite Logo"
+                />
+                <span
+                  class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+                  >Calories Counter</span
+                >
+              </a>
+            </div>
+          </nav>
+        </header>
+        <section class="mt-6">
+          <div class="flex space-x-4">
+            <div class="w-full max-w-xs p-5 bg-white rounded-lg font-mono">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="meal-input"
+                >Meal</label
+              >
+              <input
+                class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                placeholder="Enter meal name..."
+                type="text"
+                id="meal-input"
+              />
+            </div>
+            <div class="w-full max-w-xs p-5 bg-white rounded-lg font-mono">
+              <label
+                class="block text-gray-700 text-sm font-bold mb-2"
+                for="calories-input"
+                >Calories</label
+              >
+              <input
+                class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                placeholder="Enter calories number"
+                type="number"
+                id="calories-input"
+              />
+            </div>
+          </div>
+          <div class="flex justify-center mt-4">
+            <button id="save-btn" class="button type1 mx-2">
+              <span class="btn-txt">Save</span>
+            </button>
+            <button id="cancel-btn" class="button type1 mx-2">
+              <span class="btn-txt">Cancel</span>
+            </button>
+          </div>
+        </section>
+        <div class="relative overflow-x-auto mt-6">
+          <table
+            class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+          >
+            <thead
+              class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
+            >
+              <tr>
+                <th scope="col" class="px-6 py-3 rounded-s-lg">Meal</th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg">Calories</th>
+                <th scope="col" class="px-6 py-3 rounded-e-lg">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+            <tfoot>
+              <tr class="font-semibold text-gray-900 dark:text-white">
+                <th scope="row" class="px-6 py-3 text-base">Total</th>
+                <td id="total-calories" class="px-6 py-3">0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.7/flowbite.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
